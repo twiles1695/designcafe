@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>デザインカフェ</title>
     <meta name="description" content="デザインカフェです。">
@@ -73,22 +72,21 @@
             </p>
         </div>
         <section id="about" class="about">
-            <div class="about_block">
+            <div class="about_img">
+                <img src="images/pc_about-100.jpg" alt="コーヒーで乾杯">
+            </div>
+            <div class="about_text">
                 <h2>
                     <img src="images/about_us@2x.png" alt="ABOUT US">
                 </h2>
-                <div class="about_img">
-                    <picture>
-                        <source media="(min-width:768px)" srcset="images/pc_about-100.jpg">
-                        <source media="(max-width:767px)" srcset="images/about_us@2x-100.jpg">
-                        <img src="images/pc_about-100.jpg" alt="イメージ写真">
-                    </picture>
+                <div class="about_img_sp">
+                    <img src="images/about_us@2x-100.jpg" alt="コーヒーで乾杯">
                 </div>
-                <h3>
+                <p class="about_catch">
                     私たちが提供する<br>
                     こだわりのコーヒー
-                </h3>
-                <p>
+                </p>
+                <p class="about_desc">
                     サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
                     サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
                     サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
@@ -164,7 +162,7 @@
                 <img src="images/access@2x.png" alt="ACCESS">
             </h2>
             <div class="access_map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2901.4375340574843!2d139.70083308688362!3d35.65826631805014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1670677892473!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7701644594295!2d139.69906087578664!3d35.65803387259479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1692519470734!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     </main>
@@ -208,7 +206,7 @@
                 arrows: false,
                 responsive: [
                     {
-                        breakpoint: 767,
+                        breakpoint: 768,
                         settings: {
                             slidesToShow: 1,
                         }
@@ -217,35 +215,35 @@
             });
 
             // ページトップフェードイン
-            $('.pagetop').hide();
-            $(window).on('scroll', function () {
-                if ($(this).scrollTop() > 200) {
-                    $('.pagetop').fadeIn();
-                } else {
-                    $('.pagetop').fadeOut();
-                }
-            });
+            // $('.pagetop').hide();
+            // $(window).on('scroll', function () {
+            //     if ($(this).scrollTop() > 200) {
+            //         $('.pagetop').fadeIn();
+            //     } else {
+            //         $('.pagetop').fadeOut();
+            //     }
+            // });
 
-            $(window).on("scroll", function () {
-                scrollHeight = $(document).height();
-                scrollPosition = $(window).height() + $(window).scrollTop();
-                footHeight = $("footer").innerHeight() - 120;
-                if (scrollHeight - scrollPosition <= footHeight) {
-                    // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
-                    $('body').css({
-                        position: 'relative'
-                    })
-                    $(".pagetop").css({
-                        position: "absolute",
-                        bottom: footHeight,
-                    });
-                } else {
-                    $(".pagetop").css({
-                        position: "fixed",
-                        bottom: "40px",
-                    });
-                }
-            });
+            // $(window).on("scroll", function () {
+            //     scrollHeight = $(document).height();
+            //     scrollPosition = $(window).height() + $(window).scrollTop();
+            //     footHeight = $("footer").innerHeight() - 120;
+            //     if (scrollHeight - scrollPosition <= footHeight) {
+            //         // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
+            //         $('body').css({
+            //             position: 'relative'
+            //         })
+            //         $(".pagetop").css({
+            //             position: "absolute",
+            //             bottom: footHeight,
+            //         });
+            //     } else {
+            //         $(".pagetop").css({
+            //             position: "fixed",
+            //             bottom: "40px",
+            //         });
+            //     }
+            // });
 
             // lightbox
             lightbox.option({
