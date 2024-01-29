@@ -536,9 +536,7 @@ main {
 }
 
 .event_block ul li a {
-    display: inline-block;
     overflow: hidden;
-    width: 515px;
     white-space: nowrap;
     text-overflow: ellipsis;
     text-decoration: underline;
